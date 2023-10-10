@@ -97,23 +97,3 @@ function OtherFunction({ inputs }) {
   
   
   
-  
-  
-  function RenderOtherFunctions({ inputs }) {
-    return <OtherFunction inputs={inputs} />;
-  }
-  
-  
-
-
-  
-/* function InputField({ value, onChange, placeholder }) {
-    return (
-      <input
-        value={value}
-        placeholder={placeholder}
-        onChange={onChange}
-      />
-    );
-  }
-   */
