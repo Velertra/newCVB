@@ -1,0 +1,24 @@
+body{
+}
+
+#root{
+    display: flex;
+}
+
+.left-side-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.personalDetailsDiv,
+.educationDetailsDiv,
+.experienceDetailsDiv {
+    background-color: blueviolet;
+   
+}
+
+.cvDisplayDiv{
+    overflow: scroll;
+    max-height: 100%;
+}
