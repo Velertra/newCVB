@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DisplayDivider from '../utilities/separationFunction.jsx'
+import { v4 as uuidv4 } from 'uuid'
 import './base.scss'
 
 export default function DefaultData() {
@@ -28,6 +29,10 @@ export default function DefaultData() {
           [inputName]: value,
         }));
       };
+
+      const personalDetailsId = uuidv4();
+      const educationDetailsId = uuidv4();
+      const experienceDetailsId = uuidv4();
     
       const inputFields = [
         /* Personal Details */
@@ -35,6 +40,7 @@ export default function DefaultData() {
           name: 'text1',
           label: 'Full Name',
           placeholder: 'Josephine Myers',
+          
         },
         {
           name: 'text2',
@@ -111,20 +117,23 @@ export default function DefaultData() {
     
       return (
         <>
-          <div className="lef-side-div">
+          <div className="left-side-div">
             <DisplayDivider
+              id={personalDetailsId}
               fields={inputFields.slice(0, 4)}
               inputs={inputs}
               onChange={handleInputChange}
               name={'personalDetailsDiv'}
             />
             <DisplayDivider
+              id={educationDetailsId}
               fields={inputFields.slice(4, 9)}
               inputs={inputs}
               onChange={handleInputChange}
               name={'educationDetailsDiv'}
             />
             <DisplayDivider
+              id={experienceDetailsId}
               fields={inputFields.slice(9)}
               inputs={inputs}
               onChange={handleInputChange}

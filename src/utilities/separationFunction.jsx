@@ -4,7 +4,7 @@ export default function DisplayDivider({ fields, inputs, onChange, name }) {
     return (
       <div className={name}>
         {fields.map((field) => (
-          <div key={uuidv4()}>
+          <div key={field.name}>
             <label>{field.label}{' '}</label>
             <input
               value={inputs[field.name]}
