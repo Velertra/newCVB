@@ -2,6 +2,7 @@ import { useState } from "react";
 import DisplayDivider from '../utilities/separationFunction.jsx'
 import { v4 as uuidv4 } from 'uuid'
 import './base.scss'
+import AcordionBtn from "../utilities/accordionFunc.jsx";
 
 export default function DefaultData() {
     const [inputs, setInputs] = useState({
@@ -46,107 +47,119 @@ export default function DefaultData() {
           name: 'text2',
           label: 'Email Me Now',
           placeholder: 'JosephineMyers@mailadd.com',
+          
         },
         {
           name: 'text3',
           label: 'phone number',
           placeholder: '20804820840',
+          
         },
         {
           name: 'text4',
           label: 'Address',
           placeholder: 'London, UK',
+          
         },
         /* Education Info */
         {
           name: 'text5',
           label: 'School',
           placeholder: 'London City University',
+         
         },
         {
           name: 'text6',
           label: 'Degree',
           placeholder: 'Bachelors in Economics',
+          
         },
         {
           name: 'text7',
           label: 'Start Date',
           placeholder: '08/2020',
+         
         },
         {
           name: 'text8',
           label: 'End Date',
           placeholder: 'present',
+          
         },{
           name: 'text9',
           label: 'Location',
           placeholder: 'New York City, US',
+         
         },
         /* Experience Info */
         {
           name: 'text10',
           label: 'Company Name',
           placeholder: 'Umbrella Inc.',
+         
         },
         {
           name: 'text11',
           label: 'Position Title',
           placeholder: 'Enter School',
+          
         },
         {
           name: 'text12',
           label: 'Start Date',
           placeholder: 'London City University',
+          
         },
         {
           name: 'text13',
           label: 'End Date',
           placeholder: 'London City University',
+          
         },
         {
           name: 'text14',
           label: 'Location',
           placeholder: 'London City University',
+          
         },
         {
           name: 'text15',
           label: 'Description',
           placeholder: 'Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android',
+         
         },
       ];
     
       return (
         <>
-          <div className="left-side-div">
+          <div key={'left'} className="left-side-div">
             <DisplayDivider
-              id={personalDetailsId}
               fields={inputFields.slice(0, 4)}
               inputs={inputs}
               onChange={handleInputChange}
-              name={'personalDetailsDiv'}
+              className={"personalDetails"}
             />
+            <AcordionBtn />
             <DisplayDivider
-              id={educationDetailsId}
               fields={inputFields.slice(4, 9)}
               inputs={inputs}
               onChange={handleInputChange}
-              name={'educationDetailsDiv'}
+              className={"educationDetails"}
             />
+
+            <AcordionBtn />
             <DisplayDivider
-              id={experienceDetailsId}
               fields={inputFields.slice(9)}
               inputs={inputs}
               onChange={handleInputChange}
-              name={'experienceDetailsDiv'}
+              className={'experienceDetails'}
             />
           </div>  
-          <div className="cvDisplayDiv">
+          <div key={'cvDisplayDiv'} className="cvDisplayDiv">
             {Object.values(inputs).map((value, index) => (
-              <>
-                <div>
-                  <h1 key={index}>{value}</h1>
+                <div key={inputFields[index].name} className={inputFields[index].name}>
+                  <h1>{value}</h1>
                 </div>
-              </>
             ))}
           </div>
         </>

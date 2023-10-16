@@ -1,8 +1,10 @@
 body{
+    height: 98vh;
 }
 
 #root{
     display: flex;
+    height: 100%;
 }
 
 .left-side-div{
@@ -11,14 +13,18 @@ body{
     justify-content: space-between;
 }
 
-.personalDetailsDiv,
-.educationDetailsDiv,
-.experienceDetailsDiv {
+.personalDetails,
+.educationDetails,
+.experienceDetails {
     background-color: blueviolet;
    
 }
 
+.educationDetails,
+.experienceDetails {
+    display: none;
+
+} 
 .cvDisplayDiv{
     overflow: scroll;
-    max-height: 100%;
 }
