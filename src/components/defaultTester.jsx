@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid'
 import './base.scss'
 
 export default function DefaultData() {
+    const [switch, setSwitch] = useState(false)
     const [inputs, setInputs] = useState({
         text1: 'Josephine Myers',
         text2: 'JosephineMyers@mailadd.com',
@@ -50,6 +51,7 @@ export default function DefaultData() {
               onChange={handleInputChange}
               key={"personDetails"}
             />
+            
           </div>  
           <div className="cvDisplayDiv">
             {Object.values(inputs).map((value, index) => (

@@ -1,6 +1,6 @@
-export default function acordionBtn(pickedName) {
+/* export default function AcordionBtn(pickedName) {
     return (
-        <button>HitThis</button>
+        <button onClick={}>HitThis</button>
     )
 
-}
+} */
