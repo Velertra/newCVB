@@ -1,9 +1,19 @@
 const CreateOutputs = ( { info, text } ) => {
+
+    function sanitize(letters){
+        if(typeof letters === 'string') {
+            return letters.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        } else {
+            return ''
+        }
+    }
+
     return ( 
         <>
         {info.map((data, index) => (
-            <div key={`display-${index}`}>
-                <p>{text[data.name]}</p>
+            
+            <div className={(data.label).toLowerCase().replace(/\s/g, '-')} key={`display-${index}`}>
+                <p>{sanitize(text[data.name])}</p>
             </div>
         ))}
      </>

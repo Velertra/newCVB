@@ -1,8 +1,10 @@
 //import Firstinput from '../components/FirstInput';
 
+import { useState } from "react";
 
-const InfoComponent = ( { info, handleTextChange } ) => {
 
+const CreateInput = ( { info, handleTextChange, defaultValues } ) => {
+ 
     return ( 
         <>
         {info.map((data, index) =>
@@ -10,7 +12,11 @@ const InfoComponent = ( { info, handleTextChange } ) => {
                 <label>{data.label}{" "}
                     <input
                         name={`input-${data.name}`} 
-                        onChange={(e) => handleTextChange(data.name, e.target.value)}   
+                        value={defaultValues[data.name]}
+                        onChange={(e) => {
+                            handleTextChange(data.name, e.target.value)
+                            /* handleTextHere(e.target.value) */
+                        }}   
                     />
                 </label>
             </div>
@@ -19,4 +25,4 @@ const InfoComponent = ( { info, handleTextChange } ) => {
     );
 }
  
-export default InfoComponent;
+export default CreateInput;

@@ -3,25 +3,25 @@ const PersonalInfo = [
     {
       name: 'text1',
       label: 'Full Name',
-      placeholder: 'Josephine Myers',
+      default: 'Josephine Myers',
       
     },
     {
       name: 'text2',
       label: 'Email Me Now',
-      placeholder: 'JosephineMyers@mailadd.com',
+      default: 'JosephineMyers@mailadd.com',
       
     },
     {
       name: 'text3',
       label: 'phone number',
-      placeholder: '20804820840',
+      default: '20804820840',
       
     },
     {
       name: 'text4',
       label: 'Address',
-      placeholder: 'London, UK',
+      default: 'London, UK',
       
     },
 
@@ -32,30 +32,30 @@ const EducationInfo = [
     {
       name: 'text5',
       label: 'School',
-      placeholder: 'London City University',
+      default: 'London City University',
       
     },
     {
       name: 'text6',
       label: 'Degree',
-      placeholder: 'Bachelors in Economics',
+      default: 'Bachelors in Economics',
       
     },
     {
       name: 'text7',
       label: 'Start Date',
-      placeholder: '08/2020',
+      default: '08/2020',
       
     },
     {
       name: 'text8',
       label: 'End Date',
-      placeholder: 'present',
+      default: 'present',
       
     },{
       name: 'text9',
       label: 'Location',
-      placeholder: 'New York City, US',
+      default: 'New York City, US',
       
     },
 ];
@@ -65,37 +65,37 @@ const ExperienceInfo = [
     {
       name: 'text10',
       label: 'Company Name',
-      placeholder: 'Umbrella Inc.',
+      default: 'Umbrella Inc.',
       
     },
     {
       name: 'text11',
       label: 'Position Title',
-      placeholder: 'Enter School',
+      default: 'Enter School',
       
     },
     {
       name: 'text12',
       label: 'Start Date',
-      placeholder: 'London City University',
+      default: 'London City University',
       
     },
     {
       name: 'text13',
       label: 'End Date',
-      placeholder: 'London City University',
+      default: 'London City University',
       
     },
     {
       name: 'text14',
       label: 'Location',
-      placeholder: 'London City University',
+      default: 'London City University',
       
     },
     {
       name: 'text15',
       label: 'Description',
-      placeholder: 'Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android',
+      default: 'Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android',
       
     },
   ];
