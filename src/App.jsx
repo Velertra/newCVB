@@ -1,11 +1,10 @@
-import DefaultData from './components/defaultData'
 import { useState } from 'react';
-
+//import  MainComponent  from './components/MainComponent';
+import MainComponent from './components/MainComponent';
 
 export default function App() {
-  const [onSwitch, setOnSwitch] = useState(false);
 
   return(
-    <DefaultData />
+    <MainComponent />
   )
 }
