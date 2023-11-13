@@ -11,11 +11,14 @@ const CreateInput = ( { info, handleTextChange, defaultValues } ) => {
             <div className={`container-${data.name}`} key={index}>
                 <label>{data.label}{" "}
                     <input
+                        type={data.type}
+                        format={data.format}
+                        pattern={data.pattern}
                         name={`input-${data.name}`} 
                         value={defaultValues[data.name]}
+                        placeholder={data.placeholder}
                         onChange={(e) => {
-                            handleTextChange(data.name, e.target.value)
-                            /* handleTextHere(e.target.value) */
+                            handleTextChange(data.name, e.target.value);
                         }}   
                     />
                 </label>

@@ -6,8 +6,6 @@ import CreateOutputs from '../utilities/CreateOutputs';
 
 const MainComponent = () => {
     const [text, setText] = useState({});
-    const [onSwitch, setOnSwitch] = useState(false);
-    const [value, setValue] = useState('')
 
     function handleTextChange(name, value){
         setText((prevText) => ({ ...prevText, [name]: value }));
@@ -22,7 +20,6 @@ const MainComponent = () => {
         })
         setText(() => defaultData);
     }
-
 
     return ( 
         <>
