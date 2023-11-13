@@ -1,29 +1,33 @@
 //import Firstinput from '../components/FirstInput';
 
 import { useState } from "react";
-
+import InputComponent from "../components/InputComponent";
 
 const CreateInput = ( { info, handleTextChange, defaultValues } ) => {
- 
+    const [hideBtn, setHideBtn] = useState(false);
+
+    function hideBtnSwitch(){
+        if(hideBtn == false){
+            setHideBtn(() => true);
+        } else {
+            setHideBtn(() => false)
+        }
+    }
+
+    
     return ( 
         <>
-        {info.map((data, index) =>
-            <div className={`container-${data.name}`} key={index}>
-                <label>{data.label}{" "}
-                    <input
-                        type={data.type}
-                        format={data.format}
-                        pattern={data.pattern}
-                        name={`input-${data.name}`} 
-                        value={defaultValues[data.name]}
-                        placeholder={data.placeholder}
-                        onChange={(e) => {
-                            handleTextChange(data.name, e.target.value);
-                        }}   
-                    />
-                </label>
-            </div>
-        )}
+        {hideBtn ? <button onClick={() =>hideBtnSwitch()}>hide</button> : <>
+            <button onClick={() =>hideBtnSwitch()}>hide</button>
+            {info.map((data, index) =>
+                <InputComponent
+                    key={index}
+                    handleTextChange={handleTextChange}
+                    defaultValues={defaultValues}
+                    data={data}
+                />
+            )}
+        </>}
         </>
     );
 }

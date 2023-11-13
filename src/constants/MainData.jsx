@@ -60,7 +60,7 @@ const EducationInfo = [
     {
       name: 'text8',
       label: 'End Date',
-      default: 'present',
+      default: '08/2020',
       type: 'date',
       placeholder: 'Enter End Date'
     },{
@@ -91,14 +91,14 @@ const ExperienceInfo = [
     {
       name: 'text12',
       label: 'Start Date',
-      default: 'London City University',
+      default: '08/2020',
       type: 'date',
       placeholder: 'Enter Start Date'
     },
     {
       name: 'text13',
       label: 'End Date',
-      default: 'London City University',
+      default: '08/2020',
       type: 'date',
       placeholder: 'Enter End Date'
     },
@@ -113,9 +113,9 @@ const ExperienceInfo = [
       name: 'text15',
       label: 'Description',
       default: 'Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android',
-      type: 'text',
-      placeholder: 'Enter Description'
-      
+     
+      placeholder: 'Enter Description',
+      type: 'textarea'
     },
   ];
 
