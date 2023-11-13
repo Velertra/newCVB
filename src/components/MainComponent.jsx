@@ -2,11 +2,13 @@ import { useState } from 'react';
 import CreateInput from '../utilities/CreateInputs'
 import { PersonalInfo, EducationInfo, ExperienceInfo } from '../constants/MainData';
 import CreateOutputs from '../utilities/CreateOutputs';
-import HideBtn from './HideBtn';
+//import HideBtn from './HideBtn';
+import InputComponent from './InputComponent';
 
 
 const MainComponent = () => {
     const [text, setText] = useState({});
+
     function handleTextChange(name, value){
         setText((prevText) => ({ ...prevText, [name]: value }));
     } 
@@ -33,11 +35,15 @@ const MainComponent = () => {
         <div className='Input-container'>
             <button onClick={() => addDefaultData()} >Add Default</button>
             <div className='personal-info'>
-                <CreateInput
-                    info={PersonalInfo}
-                    handleTextChange={handleTextChange}
-                    defaultValues={text}
-                />
+                {PersonalInfo.map((data, index) => 
+                    <InputComponent
+                        info={PersonalInfo}
+                        handleTextChange={handleTextChange}
+                        defaultValues={text}
+                        data={data}
+                        key={index}
+                    />
+                )}
             </div>
             <div className='education-info'>
                 <CreateInput
@@ -45,6 +51,7 @@ const MainComponent = () => {
                     handleTextChange={handleTextChange}
                     defaultValues={text}
                 />
+               
             </div>
             <div className='experience-info'>
                 <CreateInput
