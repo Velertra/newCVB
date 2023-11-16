@@ -2,21 +2,20 @@ const PersonalInfo = [
     /* Personal Details */
     {
       name: 'text1',
-      label: 'Full Name',
       default: 'Josephine Myers',
       type: 'text',
       placeholder: 'First and Last name'
     },
     {
       name: 'text2',
-      label: 'Email Me Now',
+      label: 'Email:',
       default: 'JosephineMyers@mailadd.com',
       type: 'email',
       placeholder: 'Enter Email'
     },
     {
       name: 'text3',
-      label: 'phone number',
+      label: 'Phone:',
       default: '20804820840',
       type: 'tel',
       pattern: "[0-9]{3}-[0-9]{3}-[0-9]{1}",
@@ -25,7 +24,7 @@ const PersonalInfo = [
     },
     {
       name: 'text4',
-      label: 'Address',
+      label: 'Address:',
       default: 'London, UK',
       type: 'text',
       placeholder: 'Enter Address'
@@ -52,7 +51,7 @@ const EducationInfo = [
     {
       name: 'text7',
       label: 'Start Date',
-      default: '08/2020',
+      default: '',
       type: 'date',
       format: 'MM-dd',
       placeholder: 'Enter Start Date'
@@ -60,7 +59,7 @@ const EducationInfo = [
     {
       name: 'text8',
       label: 'End Date',
-      default: '08/2020',
+      default: '',
       type: 'date',
       placeholder: 'Enter End Date'
     },{
@@ -91,14 +90,14 @@ const ExperienceInfo = [
     {
       name: 'text12',
       label: 'Start Date',
-      default: '08/2020',
+      default: '',
       type: 'date',
       placeholder: 'Enter Start Date'
     },
     {
       name: 'text13',
       label: 'End Date',
-      default: '08/2020',
+      default: '',
       type: 'date',
       placeholder: 'Enter End Date'
     },
@@ -113,9 +112,7 @@ const ExperienceInfo = [
       name: 'text15',
       label: 'Description',
       default: 'Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android',
-     
       placeholder: 'Enter Description',
-      type: 'textarea'
     },
   ];
 

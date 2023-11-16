@@ -11,10 +11,10 @@ const CreateOutputs = ( { info, text } ) => {
     return ( 
         <>
         {info.map((data, index) => (
-            
-            <div className={(data.label).toLowerCase().replace(/\s/g, '-')} key={`display-${index}`}>
+            <label className={(data.name).toLowerCase().replace(/\s/g, '-')} key={`display-${index}`}>
+                {data.label}
                 <p>{sanitize(text[data.name])}</p>
-            </div>
+            </label>
         ))}
      </>
      );

@@ -5,10 +5,10 @@ const InputComponent = ( {data, defaultValues, handleTextChange, index} ) => {
             <label>{data.label}{" "}
                 <input
                     type={data.type}
-                    format={data.format}
+                    className={data.styler}
                     pattern={data.pattern}
                     name={`input-${data.name}`} 
-                    value={defaultValues[data.name]}
+                    value={defaultValues[data.name] || ''}
                     placeholder={data.placeholder}
                     onChange={(e) => {
                         handleTextChange(data.name, e.target.value);
