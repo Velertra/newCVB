@@ -3,7 +3,7 @@
 import { useState } from "react";
 import InputComponent from "../components/InputComponent";
 
-const CreateInput = ( { info, handleTextChange, defaultValues, addExtraSection } ) => {
+const CreateInput = ( { info, handleTextChange, defaultValues } ) => {
     const [hideBtn, setHideBtn] = useState(false);
     const [sectionsArray, setSectionsArray] = useState([]);
 
@@ -24,11 +24,9 @@ const CreateInput = ( { info, handleTextChange, defaultValues, addExtraSection }
         let newSections = [];
         for(let x = 0; x < sectionsArray.length; x++){
             if(sectionsArray[x] !== sectionsArray[test.key]){
-                //console.log(sectionsArray[x])
                 newSections.push(<div key={test.key}></div>);
             }
         }
-        
         console.log(newSections)
         setSectionsArray(() => newSections)
     }
@@ -49,12 +47,11 @@ const CreateInput = ( { info, handleTextChange, defaultValues, addExtraSection }
                     data={data}
                 />
             )}
-            {/* add a section for every div in  */}
-            
+
+            {/* add a section for every div in  section array*/}
             {Array.isArray(sectionsArray) &&
             sectionsArray.map((div, index) => (
-                    <div key={index}>
-                        
+                    <div id='' key={index}>
                         {info.map((data, dataIndex) => (
                             <InputComponent
                                 info={data}

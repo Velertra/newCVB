@@ -1,7 +1,7 @@
 const InputComponent = ( {data, defaultValues, handleTextChange, index} ) => {
 
     return ( 
-        <div className={`container-${data.name}`} key={index}>
+        <div className="border" id={(`${data.label}-container`).toLowerCase().replace(/\s/g, '-')}>
             <label>{data.label}{" "}
                 <input
                     type={data.type}
@@ -14,8 +14,8 @@ const InputComponent = ( {data, defaultValues, handleTextChange, index} ) => {
                         handleTextChange(data.name, e.target.value);
                     }}   
                 />
-            </label>
-        </div>    
+            </label>   
+        </div>
      );
 }
  

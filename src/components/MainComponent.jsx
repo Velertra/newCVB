@@ -32,9 +32,9 @@ const MainComponent = () => {
 
     return ( 
         <div className='flex max-h-full'>
-            <div className='w-2/5 no-scrollbar overflow-auto child:border'>
-                <button onClick={() => addDefaultData()} >Add Default</button>
-                <div className=''>
+            <div className='flex flex-col w-2/5 no-scrollbar overflow-auto p-2 bg-purple-400 child:border-2 child:border-blue-700 child:p-2' id='input-container'>
+                <img src='/icon/user-pen.svg' className='w-2/12' id='fillin-icon' onClick={() => addDefaultData()} ></img>
+                <div className='bg-green-300'>
                     {PersonalInfo.map((data, index) => 
                         <InputComponent
                             info={PersonalInfo}
@@ -45,7 +45,7 @@ const MainComponent = () => {
                         />
                     )}
                 </div>
-                <div className='education-info'>
+                <div className='bg-green-300'>
                     <CreateInput
                         info={EducationInfo}
                         handleTextChange={handleTextChange}
@@ -53,7 +53,7 @@ const MainComponent = () => {
                     />
                 
                 </div>
-                <div className='experience-info'>
+                <div className='bg-green-300'>
                     <CreateInput
                         info={ExperienceInfo}
                         handleTextChange={handleTextChange}
@@ -61,7 +61,7 @@ const MainComponent = () => {
                     />
                 </div>
             </div>
-            <div id='outputs' className='flex w-3/5 overflow-auto border-2 border-indigo-600 no-scrollbar p-4 child:p-4'>
+            <div id='outputs' className='flex flex-col w-3/5 overflow-auto border-2 border-red-600 no-scrollbar p-4 child:p-4 child:bg-teal-600'>
                 <section className=''>
                     <CreateOutputs
                         info={PersonalInfo}

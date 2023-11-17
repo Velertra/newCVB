@@ -4,14 +4,16 @@ const PersonalInfo = [
       name: 'text1',
       default: 'Josephine Myers',
       type: 'text',
-      placeholder: 'First and Last name'
+      placeholder: 'First and Last name',
+      outStyle: 'bg-red-400 text-xl leading-loose font-black'
     },
     {
       name: 'text2',
       label: 'Email:',
       default: 'JosephineMyers@mailadd.com',
       type: 'email',
-      placeholder: 'Enter Email'
+      placeholder: 'Enter Email',
+      outStyle: 'bg-blue-600'
     },
     {
       name: 'text3',
