@@ -1,15 +1,13 @@
-//import Firstinput from '../components/FirstInput';
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InputComponent from "../components/InputComponent";
 
-const CreateInput = ( { info, handleTextChange, defaultValues } ) => {
+const CreateInput = ( { info, handleTextChange, defaultValues, container, amountOfExtras } ) => {
     const [hideBtn, setHideBtn] = useState(false);
     const [sectionsArray, setSectionsArray] = useState([]);
 
-    function addExtraSection(){
-        //console.log(sectionsArray)
-        setSectionsArray((prevInputs) => [...prevInputs, <div key={prevInputs.length}></div>]);
+    function addExtraSection(e){
+        setSectionsArray((prevInputs) => [...prevInputs, <div key={prevInputs.length}>{prevInputs.length}</div>]);
+        amountOfExtras(e)
     }
 
     function hideBtnSwitch(){
@@ -30,7 +28,6 @@ const CreateInput = ( { info, handleTextChange, defaultValues } ) => {
         console.log(newSections)
         setSectionsArray(() => newSections)
     }
-
     
     return ( 
         <>
@@ -38,32 +35,39 @@ const CreateInput = ( { info, handleTextChange, defaultValues } ) => {
         : 
         <>
             <button onClick={() =>hideBtnSwitch()}>hide</button>
-            <button onClick={() => addExtraSection()}>extra</button>
-            {info.map((data, index) =>
-                <InputComponent
-                    key={index}
-                    handleTextChange={handleTextChange}
-                    defaultValues={defaultValues}
-                    data={data}
-                />
-            )}
-
+            <button id={container} onClick={(e) => addExtraSection(e)}>extra</button>
+            
+                <form className='input-main-container'>
+                {info.map((data, index) =>
+                    <InputComponent
+                        key={index}
+                        handleTextChange={handleTextChange}
+                        defaultValues={defaultValues}
+                        data={data}
+                    />
+                )}
+                </form>
             {/* add a section for every div in  section array*/}
-            {Array.isArray(sectionsArray) &&
-            sectionsArray.map((div, index) => (
-                    <div id='' key={index}>
-                        {info.map((data, dataIndex) => (
-                            <InputComponent
-                                info={data}
-                                handleTextChange={handleTextChange}
-                                defaultValues={''}
-                                data={data}
-                                key={data.label + dataIndex}
-                            />
-                        ))}
-                        <button onClick={(e) => removeSection(div)}>remove</button>
-                    </div>
-                ))}
+            
+                {Array.isArray(sectionsArray) &&
+                    sectionsArray.map((div, index) => (
+                        <section id={container + index} key={index}>
+                            <form className={'input-new-container' + index}>
+                                {info.map((data, dataIndex) => (
+                                    <InputComponent
+                                        info={data}
+                                        handleTextChange={handleTextChange}
+                                        defaultValues={defaultValues}
+                                        data={data}
+                                        container={`-extra-${index}`}
+                                        key={data.label + dataIndex}
+                                    
+                                    />
+                                ))}
+                            </form>
+                            <button onClick={(e) => removeSection(div)}>remove</button>
+                        </section>
+                    ))}
         </>}
         </>
     );
