@@ -1,8 +1,13 @@
-# React + Vite
+CV/Resume Builder that allows users to create their professional resumes effortlessly. Front-end web application built with React and styled with Tailwind CSS, for users to preview their CV in real-time.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+How to use:
 
-Currently, two official plugins are available:
+1. Clone respository.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Move to cloned folder.
+
+3. Run "npm install". in terminal.
+
+4. Then run "npm run dev"
+
+5. Click on terminal link
