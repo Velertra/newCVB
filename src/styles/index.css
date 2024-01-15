@@ -14,5 +14,5 @@ button:active {
  
 body,
 #root {
-  @apply h-screen m-0 overflow-hidden;
+  @apply h-screen m-0;
 }

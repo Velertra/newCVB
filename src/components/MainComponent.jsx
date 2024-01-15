@@ -14,7 +14,7 @@ const MainComponent = () => {
         setText((prevText) => ({ ...prevText, [name]: value }));
     } 
 
-    //sets default data, also deltes if first input equals 'Josephine Myers'
+    //sets default data, also deletes if first input equals 'Josephine Myers'
     function addDefaultData(){
         if(text == undefined || text.text1 !== 'Josephine Myers'){
            const defaultData = {};
@@ -42,8 +42,8 @@ const MainComponent = () => {
     }
 
     return ( 
-        <div className='flex max-h-full font-serif'>
-            <div className='flex flex-col w-2/5 no-scrollbar overflow-auto p-2 bg-purple-400 child:border-2 child:border-blue-700 child:p-2' id='input-container'>
+        <div className='max-h-full font-serif min-[600px]:flex'>
+            <div className='flex flex-col no-scrollbar overflow-auto p-2 bg-purple-400 min-[600px]:w-2/5 child:border-2 child:border-blue-700 child:p-2' id='input-container'>
                 <img src='/icon/user-pen.svg' className='w-2/12' id='fillin-icon' onClick={() => addDefaultData()} ></img>
                 <div className='bg-green-300'>
                     <form>
@@ -78,7 +78,7 @@ const MainComponent = () => {
                 </div>
             </div>
 
-            <div id='outputs' className='flex flex-col w-3/5 overflow-auto border-2 border-red-600 no-scrollbar p-4 child:px-4 child:bg-teal-600'>
+            <div id='outputs' className='flex flex-col overflow-auto border-2 min-[600px]:w-3/5 border-red-600 no-scrollbar p-4 child:px-4 child:bg-teal-600'>
                 <section className=''>
                     <div className=' pt-1'>
                         <OutputComponent

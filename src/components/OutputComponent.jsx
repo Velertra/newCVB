@@ -28,7 +28,6 @@ const CreateOutputs = ( { info, text, indexNumber, settings } ) => {
                 const outputText = (data.label).toLowerCase().replace(/\s/g, '-') + (settings? `-extra-${indexNumber}` : '');
                 const test = (data.name) + (settings ? `-extra-${indexNumber}` : '');
                 
-                //console.log(text[test])
                 return (
                     <label htmlFor={htmlForId} className={data.outStyle} key={`display-${index}`}>
                     {/* <span>{data.label}</span> */}
