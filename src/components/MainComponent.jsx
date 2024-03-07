@@ -1,4 +1,83 @@
-import { useEffect, useState } from 'react';
+import { useState } from "react";
+import InputComponent from "./InputComponent";
+import mainData from '../constants/MainData.json'
+import CreateOutputs from "./OutputComponent";
+
+
+const MainComponent = () => {
+    const [text, setText] = useState('');
+
+    function runThisFunction(e){
+        e.preventDefault()   
+    }
+
+    function sendTextBack(text, name){
+        setText((prevText) => ({ ...prevText, [name]: text }));
+    }
+
+    return ( 
+        <div 
+            id="main-component"
+            className="max-h-full font-serif "
+        >
+            <div className="main-inputs">
+                {Object.entries(mainData).map(([key, obj]) => (
+                    <div 
+                        id={key + "-inputs"} 
+                        className="flex flex-col no-scrollbar overflow-auto p-2 bg-purple-400 min-[600px]:w-2/5 child:border-2 child:border-blue-700 child:p-2" 
+                        key={key}
+                    >
+                        {Object.entries(obj).map(([key, objSection]) => (
+                            <div key={key}>
+                                <InputComponent
+                                    data={objSection}
+                                    sendTextBack={(e, x) => sendTextBack(e, x)}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                ))}
+            </div>
+            <div className="resume-section">
+                {Object.entries(mainData).map(([key, obj]) => (
+                    <div className={key + "-output"} key={key}>
+                        <CreateOutputs
+                            info={obj}
+                            text={text}
+                            settings={false}
+                        />
+                    </div>
+                ))}
+            </div>
+        </div>
+
+     );
+}
+ 
+export default MainComponent;
+
+
+
+
+
+{/* {Object.entries(mainData.EducationInfo).map(([key, objSection]) => (
+                    <div key={key}>
+                        <InputComponent
+                            data={objSection}
+                            sendTextBack={(e, x) => sendTextBack(e, x)}
+                        />
+                    </div>
+                ))} */}
+
+
+
+
+
+
+
+
+
+/* import { useEffect, useState } from 'react';
 import CreateInput from '../utilities/CreateInputs'
 import { PersonalInfo, EducationInfo, ExperienceInfo } from '../constants/MainData';
 import OutputComponent from './OutputComponent';
@@ -32,21 +111,33 @@ const MainComponent = () => {
     }
 
     function amountOfExtras(e){
-        console.log(e.target.id)
         if(e.target.id == "experience"){
             setExtraExper((prev) => [...prev, <div key={prev.length}>{prev.length}</div>]);
         } else {
             setExtraEduc((prev) => [...prev, <div key={prev.length}>{prev.length}</div>]);
         }
-        
     }
+
+    function removeSection(test){
+        let newSections = [];
+        //console.log(extraExper[x])
+        for(let x = 0; x < extraExper.length; x++){
+            console.log(extraExper[x])
+            if(extraExper[x] !== extraExper[test.key]){
+                newSections.push(extraExper[x]);
+            }
+        }
+        console.log(newSections)
+        setextraExper(() => newSections)
+    }
+
 
     return ( 
         <div className='max-h-full font-serif min-[600px]:flex'>
             <div className='flex flex-col no-scrollbar overflow-auto p-2 bg-purple-400 min-[600px]:w-2/5 child:border-2 child:border-blue-700 child:p-2' id='input-container'>
                 <img src='/icon/user-pen.svg' className='w-2/12' id='fillin-icon' onClick={() => addDefaultData()} ></img>
                 <div className='bg-green-300'>
-                    <form>
+                    <form >
                     {PersonalInfo.map((data, index) => 
                         <InputComponent
                             info={PersonalInfo}
@@ -107,6 +198,7 @@ const MainComponent = () => {
                                         text={text}
                                         indexNumber={index}
                                         settings={true}
+                                        removeSection={removeSection}
                                     />
                             ))}
                             </div>
@@ -138,4 +230,4 @@ const MainComponent = () => {
      );
 }
  
-export default MainComponent;
+export default MainComponent; */

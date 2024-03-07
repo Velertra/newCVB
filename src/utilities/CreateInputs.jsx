@@ -1,12 +1,21 @@
-import { useEffect, useState } from "react";
+
+
+
+
+
+
+
+
+
+/* import { useEffect, useState } from "react";
 import InputComponent from "../components/InputComponent";
 
-const CreateInput = ( { info, handleTextChange, defaultValues, container, amountOfExtras } ) => {
+const CreateInput = ( { info, handleTextChange, defaultValues, container, amountOfExtras, } ) => {
     const [hideBtn, setHideBtn] = useState(false);
     const [sectionsArray, setSectionsArray] = useState([]);
 
     function addExtraSection(e){
-        setSectionsArray((prevInputs) => [...prevInputs, <div key={prevInputs.length}>{prevInputs.length}</div>]);
+        setSectionsArray((prevInputs) => [...prevInputs, <div key={'test'}>{prevInputs.length}</div>]);
         amountOfExtras(e)
     }
 
@@ -20,12 +29,17 @@ const CreateInput = ( { info, handleTextChange, defaultValues, container, amount
 
     function removeSection(test){
         let newSections = [];
+       
+        
         for(let x = 0; x < sectionsArray.length; x++){
-            if(sectionsArray[x] !== sectionsArray[test.key]){
-                newSections.push(<div key={test.key}></div>);
+
+           
+            if(sectionsArray[x].key !== test.toString()){
+               
+                newSections.push(sectionsArray[x]);
             }
         }
-        console.log(newSections)
+        
         setSectionsArray(() => newSections)
     }
     
@@ -47,10 +61,9 @@ const CreateInput = ( { info, handleTextChange, defaultValues, container, amount
                     />
                 )}
                 </form>
-            {/* add a section for every div in  section array*/}
             
                 {Array.isArray(sectionsArray) &&
-                    sectionsArray.map((div, index) => (
+                    sectionsArray.map((section, index) => (
                         <section id={container + index} key={index}>
                             <form className={'input-new-container' + index}>
                                 {info.map((data, dataIndex) => (
@@ -63,9 +76,10 @@ const CreateInput = ( { info, handleTextChange, defaultValues, container, amount
                                         key={data.label + dataIndex}
                                     
                                     />
+                                    
                                 ))}
                             </form>
-                            <button onClick={(e) => removeSection(div)}>remove</button>
+                            <button  onClick={(e) => removeSection(index)}>remove</button>
                         </section>
                     ))}
         </>}
@@ -73,4 +87,4 @@ const CreateInput = ( { info, handleTextChange, defaultValues, container, amount
     );
 }
  
-export default CreateInput;
+export default CreateInput; */
