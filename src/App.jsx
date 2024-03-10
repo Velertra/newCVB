@@ -1,11 +1,6 @@
-import { useState } from 'react';
-import MainComponent from './components/MainComponent';
+import { useState } from "react";
+import MainComponent from "./components/MainComponent";
 
 export default function App() {
-
-  return(
-    
-      <MainComponent />
-    
-  )
+  return <MainComponent />;
 }

@@ -1,81 +1,116 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import InputComponent from "./InputComponent";
-import mainData from '../constants/MainData.json'
+import mainData from "../constants/MainData.json";
 import CreateOutputs from "./OutputComponent";
 
-
 const MainComponent = () => {
-    const [text, setText] = useState('');
+  const [text, setText] = useState("");
+  
+  function runThisFunction(e) {
+    e.preventDefault();
+  }
 
-    function runThisFunction(e){
-        e.preventDefault()   
+  function sendTextBack(text, name) {
+    setText((prevText) => ({ ...prevText, [name]: text }));
+  }
+
+  function addDefaultData() {
+    if (text == undefined || text.text1 !== "Josephine Myers") {
+      const defaultData = {};
+      [
+        mainData.personal.a,
+        mainData.education.b,
+        mainData.experience.e,
+        mainData.experience.f,
+      ].forEach((arr) => {
+        arr.forEach((data) => {
+          defaultData[data.name] = data.default;
+        });
+      });
+      setText(() => defaultData);
+    } else {
+      for (let state in text) {
+        setText((prevText) => ({ ...prevText, [state]: "" }));
+      }
     }
+  }
 
-    function sendTextBack(text, name){
-        setText((prevText) => ({ ...prevText, [name]: text }));
+  function displaySection(edit) {
+    //console.log(edit.target.parentNode.nextElementSibling);
+
+    if (edit.target.parentNode.parentNode.id == "education-input-container") {
+      edit.target.style.display = "none"
+      edit.target.parentNode.nextElementSibling.style.display =
+        "block";
+      /* edit.target.parentNode[5].style.display = "none"; */
+    } else {
+      edit.target.style.display = "none"
+      edit.target.parentNode.nextElementSibling.style.display =
+        "block";
+      /* edit.target.parentNode[6].style.display = "none"; */
     }
+  }
 
-    return ( 
-        <div 
-            id="main-component"
-            className="max-h-full font-serif "
-        >
-            <div className="main-inputs">
-                {Object.entries(mainData).map(([key, obj]) => (
-                    <div 
-                        id={key + "-inputs"} 
-                        className="flex flex-col no-scrollbar overflow-auto p-2 bg-purple-400 min-[600px]:w-2/5 child:border-2 child:border-blue-700 child:p-2" 
-                        key={key}
-                    >
-                        {Object.entries(obj).map(([key, objSection]) => (
-                            <div key={key}>
-                                <InputComponent
-                                    data={objSection}
-                                    sendTextBack={(e, x) => sendTextBack(e, x)}
-                                />
-                            </div>
-                        ))}
-                    </div>
+  return (
+    <div id="main-component" className="max-h-full font-serif ">
+      <div id="main-inputs">
+        <img
+          src="/icon/user-pen.svg"
+          className="w-1/12"
+          id="fillin-icon"
+          onClick={() => addDefaultData()}
+        ></img>
+        {Object.entries(mainData).map(([key, obj]) => (
+          <div
+            id={key + "-input-container"}
+            className="flex flex-col no-scrollbar overflow-auto p-2 bg-purple-400 min-[600px]:w-2/5 child:border-2 child:border-blue-700 child:p-2"
+            key={key}
+          >
+            <form id={key + "-inputs"} onSubmit={(e) => runThisFunction(e)}>
+              {key.length > 4 && key}
+              {Object.entries(obj).map(([key, objSection]) => (
+                <div id={key + '-inputs'} className="border-8 border-purple-400" key={key}>
+                {Object.entries(objSection).map(([key, objItem]) => (
+                  <div key={key}>
+                  <InputComponent
+                    data={objItem}
+                    defaultText={text}
+                    sendTextBack={(e, x) => sendTextBack(e, x)}
+                  />
+                  
+                </div>
                 ))}
-            </div>
-            <div className="resume-section">
-                {Object.entries(mainData).map(([key, obj]) => (
-                    <div className={key + "-output"} key={key}>
-                        <CreateOutputs
-                            info={obj}
-                            text={text}
-                            settings={false}
-                        />
-                    </div>
-                ))}
-            </div>
+                <button id={key + "-add-btn"} onClick={(e) => displaySection(e)}>+</button>
+                </div>
+                
+              ))}
+              
+              {/* <button></button> */}
+            </form>
+          </div>
+        ))}
+      </div>
+      <div className="resume-section">
+        <div className={"outputs"}>
+          <CreateOutputs data={mainData} text={text}/>
         </div>
+      </div>
+    </div>
+  );
+};
 
-     );
-}
- 
 export default MainComponent;
 
-
-
-
-
-{/* {Object.entries(mainData.EducationInfo).map(([key, objSection]) => (
+{
+  /* {Object.entries(mainData.EducationInfo).map(([key, objSection]) => (
                     <div key={key}>
                         <InputComponent
                             data={objSection}
                             sendTextBack={(e, x) => sendTextBack(e, x)}
                         />
                     </div>
-                ))} */}
-
-
-
-
-
-
-
-
+                ))} */
+}
 
 /* import { useEffect, useState } from 'react';
 import CreateInput from '../utilities/CreateInputs'

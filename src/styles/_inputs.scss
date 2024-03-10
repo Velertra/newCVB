@@ -1,0 +1,31 @@
+/* <!-- Width of 16 by default, 32 on medium screens, and 48 on large screens -->
+<img class="w-16 md:w-32 lg:w-48" src="..."> */
+
+/* @layer utilities {
+  @variants responsive {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+}
+ */
+
+
+#c-inputs,
+#d-inputs,
+#f-inputs,
+#g-inputs,
+#h-inputs,
+#i-inputs{
+  display: none;
+}
+
+#a-add-btn,
+#d-add-btn,
+#i-add-btn {
+  display: none;
+}

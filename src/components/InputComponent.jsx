@@ -1,37 +1,31 @@
 import { useState } from "react";
 
-const InputComponent = ( { sendTextBack, data } ) => {
-    const [text, setText] = useState('');
+const InputComponent = ({ sendTextBack, data, defaultText }) => {
+  /* const [text, setText] = useState(''); */
 
-    //preventing submittion
-    function runThisFunction(e){
-        e.preventDefault()
-        //console.log(data.name)
-    }
+  //preventing submittion
+  function runThisFunction(e) {
+    e.preventDefault();
+  }
 
-    return ( 
-        <>
-            <form id="input-form" onSubmit={(e) => runThisFunction(e)}>
-                <input 
-                    id="first-input"
-                    value={text}
-                    onChange={(e) => {setText(e.target.value); sendTextBack(e.target.value, data.name)}}
+  return (
+    <>
+      <input
+        id={data.name}
+        className=""
+        value={defaultText[data.name] || ""}
+        onChange={(e) => {
+          /* setText(e.target.value);  */ sendTextBack(
+            e.target.value,
+            data.name,
+          );
+        }}
+      ></input>
+    </>
+  );
+};
 
-                ></input>
-            </form>
-        </>
-     );
-}
- 
 export default InputComponent;
-
-
-
-
-
-
-
-
 
 /* import { useState } from "react";
 import { useEffect } from "react";

@@ -1,129 +1,272 @@
 {
-  "PersonalInfo": [
-    {
-      "name": "text1",
-      "default": "Josephine Myers",
-      "label": "fullname",
-      "type": "text",
-      "placeholder": "First and Last name",
-      "outStyle": "text-xl leading-loose font-black"
-    },
-    {
-      "name": "text2",
-      "label": "Emailinput",
-      "default": "JosephineMyers@mailadd.com",
-      "type": "email",
-      "placeholder": "Enter Email",
-      "outStyle": "font-light text-xs"
-    },
-    {
-      "name": "text3",
-      "label": "Phone:",
-      "default": "20804820840",
-      "type": "tel",
-      "pattern": "[0-9]{3}-[0-9]{3}-[0-9]{1}",
-      "placeholder": "Enter Phone Number",
-      "outStyle": "font-light text-xs"
-    },
-    {
-      "name": "text4",
-      "label": "Address:",
-      "default": "London, UK",
-      "type": "text",
-      "placeholder": "Enter Address",
-      "outStyle": "font-light text-xs border-b border-black"
-    }
-  ],
-  "ExperienceInfo": [
-    {
-      "name": "text11",
-      "label": "Position Title",
-      "default": "Underwriter",
-      "type": "text",
-      "placeholder": "Enter Position Title",
-      "outStyle": "basis-full font-light text-base"
-    },
-    {
-      "name": "text10",
-      "label": "Company Name",
-      "default": "Umbrella Inc.",
-      "type": "text",
-      "placeholder": "Enter Company Name",
-      "outStyle": "font-light text-sm"
-    },
-    {
-      "name": "text12",
-      "label": "Start Date",
-      "default": "11/08",
-      "type": "text",
-      "placeholder": "Enter Start Date",
-      "outStyle": "font-light text-sm"
-    },
-    {
-      "name": "text13",
-      "label": "End Date",
-      "default": "11/08",
-      "type": "text",
-      "placeholder": "Enter End Date",
-      "outStyle": "font-light text-sm"
-    },
-    {
-      "name": "text14",
-      "label": "Location",
-      "default": "London City University",
-      "type": "text",
-      "placeholder": "Enter Location",
-      "outStyle": "font-light text-sm"
-    },
-    {
-      "name": "text15",
-      "label": "Description",
-      "default": "Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android",
-      "placeholder": "Enter Description",
-      "outStyle": "flex-2 font-light text-xs"
-    }
-  ],
-  "EducationInfo": [
-    {
-      "name": "text5",
-      "label": "School",
-      "default": "London City University",
-      "type": "text",
-      "placeholder": "Enter School / University",
-      "outStyle": "basis-6/12 text-sm"
-    },
-    {
-      "name": "text9",
-      "label": "Location",
-      "default": "New York City, US",
-      "type": "text",
-      "placeholder": "Enter Location",
-      "outStyle": "basis-6/12 text-xs"
-    },
-    {
-      "name": "text6",
-      "label": "Degree",
-      "default": "Bachelors in Economics",
-      "type": "text",
-      "placeholder": "Enter Degree / Field Of Study",
-      "outStyle": "basis-3/6 text-xs"
-    },
-    {
-      "name": "text7",
-      "label": "Start Date",
-      "default": "11/08",
-      "type": "text",
-      "format": "MM-dd",
-      "placeholder": "Enter Start Date",
-      "outStyle": "basis-1/6 text-xs"
-    },
-    {
-      "name": "text8",
-      "label": "End Date",
-      "default": "11/08",
-      "type": "text",
-      "placeholder": "Enter End Date",
-      "outStyle": "basis-1/6 text-xs"
-    }
-  ]
+  "personal": {
+    "a": [
+      {
+        "name": "text1",
+        "default": "Josephine Myers",
+        "label": "fullname",
+        "type": "text",
+        "placeholder": "First and Last name",
+        "outStyle": "text-xl leading-loose font-black"
+      },
+      {
+        "name": "text2",
+        "label": "Emailinput",
+        "default": "JosephineMyers@mailadd.com",
+        "type": "email",
+        "placeholder": "Enter Email",
+        "outStyle": "font-light text-xs"
+      },
+      {
+        "name": "text3",
+        "label": "Phone:",
+        "default": "20804820840",
+        "type": "tel",
+        "pattern": "[0-9]{3}-[0-9]{3}-[0-9]{1}",
+        "placeholder": "Enter Phone Number",
+        "outStyle": "font-light text-xs"
+      },
+      {
+        "name": "text4",
+        "label": "Address:",
+        "default": "London, UK",
+        "type": "text",
+        "placeholder": "Enter Address",
+        "outStyle": "font-light text-xs border-b border-black"
+      }
+    ]
+  },
+  "education": {
+    "b": [
+      {
+        "name": "text5",
+        "label": "School",
+        "default": "London City University",
+        "type": "text",
+        "placeholder": "Enter School / University",
+        "outStyle": "basis-6/12 text-sm"
+      },
+      {
+        "name": "text6",
+        "label": "Location",
+        "default": "New York City, US",
+        "type": "text",
+        "placeholder": "Enter Location",
+        "outStyle": "basis-6/12 text-xs"
+      },
+      {
+        "name": "text7",
+        "label": "Degree",
+        "default": "Bachelors in Economics",
+        "type": "text",
+        "placeholder": "Enter Degree / Field Of Study",
+        "outStyle": "basis-3/6 text-xs"
+      },
+      {
+        "name": "text8",
+        "label": "Start Date",
+        "default": "11/08",
+        "type": "text",
+        "format": "MM-dd",
+        "placeholder": "Enter Start Date",
+        "outStyle": "basis-1/6 text-xs"
+      },
+      {
+        "name": "text9",
+        "label": "End Date",
+        "default": "11/08",
+        "type": "text",
+        "placeholder": "Enter End Date",
+        "outStyle": "basis-1/6 text-xs"
+      }
+    ],
+    "c": [
+      {
+        "name": "ed-text1"
+      },
+      {
+        "name": "ed-text2"
+      },
+      {
+        "name": "ed-text3"
+      },
+      {
+        "name": "ed-text4"
+      },
+      {
+        "name": "ed-text5"
+      }
+    ],
+    "d": [
+      {
+        "name": "ed-text6"
+      },
+      {
+        "name": "ed-text7"
+      },
+      {
+        "name": "ed-text8"
+      },
+      {
+        "name": "ed-text9"
+      },
+      {
+        "name": "ed-text10"
+      }
+    ]
+  },
+  "experience": {
+    "e": [
+      {
+        "name": "text10",
+        "label": "Position Title",
+        "default": "Underwriter",
+        "type": "text",
+        "placeholder": "Enter Position Title",
+        "outStyle": "basis-full font-light text-base"
+      },
+      {
+        "name": "text11",
+        "label": "Company Name",
+        "default": "Umbrella Inc.",
+        "type": "text",
+        "placeholder": "Enter Company Name",
+        "outStyle": "font-light text-sm"
+      },
+      {
+        "name": "text12",
+        "label": "Start Date",
+        "default": "11/08",
+        "type": "text",
+        "placeholder": "Enter Start Date",
+        "outStyle": "font-light text-sm"
+      },
+      {
+        "name": "text13",
+        "label": "End Date",
+        "default": "11/08",
+        "type": "text",
+        "placeholder": "Enter End Date",
+        "outStyle": "font-light text-sm"
+      },
+      {
+        "name": "text14",
+        "label": "Location",
+        "default": "London City University",
+        "type": "text",
+        "placeholder": "Enter Location",
+        "outStyle": "font-light text-sm"
+      },
+      {
+        "name": "text15",
+        "label": "Description",
+        "default": "Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android",
+        "placeholder": "Enter Description",
+        "outStyle": "flex-2 font-light text-xs"
+      }
+    ],
+    "f": [
+      {
+        "name": "ex-text1",
+        "label": "Position Title",
+        "default": "UX Research Assistant",
+        "type": "text",
+        "placeholder": "Enter Position Title",
+        "outStyle": "basis-full font-light text-base"
+      },
+      {
+        "name": "ex-text2",
+        "label": "Company Name",
+        "default": "Black Mesa Labs",
+        "type": "text",
+        "placeholder": "Enter Company Name",
+        "outStyle": "font-light text-sm"
+      },
+      {
+        "name": "ex-text3",
+        "label": "Start Date",
+        "default": "11/08",
+        "type": "text",
+        "placeholder": "Enter Start Date",
+        "outStyle": "font-light text-sm"
+      },
+      {
+        "name": "ex-text4",
+        "label": "End Date",
+        "default": "11/08",
+        "type": "text",
+        "placeholder": "Enter End Date",
+        "outStyle": "font-light text-sm"
+      },
+      {
+        "name": "ex-text5",
+        "label": "Location",
+        "default": "London City University",
+        "type": "text",
+        "placeholder": "Enter Location",
+        "outStyle": "font-light text-sm"
+      },
+      {
+        "name": "ex-text6",
+        "label": "Description",
+        "default": "Supported senior researchers on accessibility standards for the open web. Created and usability tested wireframes and prototypes. Produced interactive documentation for quick onboarding of new researchers.",
+        "placeholder": "Enter Description",
+        "outStyle": "flex-2 font-light text-xs"
+      }
+    ],
+    "g": [
+      {
+        "name": "ex-text7"
+      },
+      {
+        "name": "ex-text8"
+      },
+      {
+        "name": "ex-text9"
+      },
+      {
+        "name": "ex-text10"
+      },
+      {
+        "name": "ex-text11"
+      },
+      {
+        "name": "ex-text12"
+      }
+    ],
+    "h": [
+      {
+        "name": "ex-text13"
+      },
+      {
+        "name": "ex-text14"
+      },
+      {
+        "name": "ex-text15"
+      },
+      {
+        "name": "ex-text16"
+      },
+      {
+        "name": "ex-text17"
+      }
+    ],
+    "i": [
+      {
+        "name": "ex-text18"
+      },
+      {
+        "name": "ex-text19"
+      },
+      {
+        "name": "ex-text20"
+      },
+      {
+        "name": "ex-text21"
+      },
+      {
+        "name": "ex-text22"
+      }
+    ]
+  }
 }
