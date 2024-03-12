@@ -48,3 +48,7 @@
     /* padding-bottom: 15px; */
     padding-bottom: 1rem;
 }
+
+#ex-start-date::after{
+    content: "-"
+}
