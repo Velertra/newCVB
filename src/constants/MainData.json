@@ -7,111 +7,147 @@
         "label": "fullname",
         "type": "text",
         "placeholder": "First and Last name",
-        "outStyle": "text-xl leading-loose font-black"
+        "outStyle":""
       },
       {
         "name": "text2",
-        "label": "Emailinput",
-        "default": "JosephineMyers@mailadd.com",
-        "type": "email",
-        "placeholder": "Enter Email",
-        "outStyle": "font-light text-xs"
+        "label": "address",
+        "default": "London, UK",
+        "type": "text",
+        "placeholder": "Enter Address",
+        "outStyle":""
       },
       {
         "name": "text3",
-        "label": "Phone:",
+        "label": "phone",
         "default": "20804820840",
         "type": "tel",
         "pattern": "[0-9]{3}-[0-9]{3}-[0-9]{1}",
         "placeholder": "Enter Phone Number",
-        "outStyle": "font-light text-xs"
+        "outStyle":""
       },
       {
         "name": "text4",
-        "label": "Address:",
-        "default": "London, UK",
-        "type": "text",
-        "placeholder": "Enter Address",
-        "outStyle": "font-light text-xs border-b border-black"
+        "label": "emailinput",
+        "default": "JosephineMyers@mailadd.com",
+        "type": "email",
+        "placeholder": "Enter Email",
+        "outStyle":""
       }
     ]
   },
   "education": {
     "b": [
       {
+        "subName": "education",
         "name": "text5",
-        "label": "School",
+        "label": "ed-school",
         "default": "London City University",
         "type": "text",
         "placeholder": "Enter School / University",
-        "outStyle": "basis-6/12 text-sm"
+        "outStyle":""
       },
       {
+        "subName": "education",
         "name": "text6",
-        "label": "Location",
+        "label": "ed-location",
         "default": "New York City, US",
         "type": "text",
         "placeholder": "Enter Location",
-        "outStyle": "basis-6/12 text-xs"
+        "outStyle":""
       },
       {
+        "subName": "education",
         "name": "text7",
-        "label": "Degree",
+        "label": "ed-degree",
         "default": "Bachelors in Economics",
         "type": "text",
         "placeholder": "Enter Degree / Field Of Study",
-        "outStyle": "basis-3/6 text-xs"
+        "outStyle":""
       },
       {
+        "subName": "education",
         "name": "text8",
-        "label": "Start Date",
+        "label": "ed-start-date",
         "default": "11/08",
         "type": "text",
         "format": "MM-dd",
         "placeholder": "Enter Start Date",
-        "outStyle": "basis-1/6 text-xs"
+        "outStyle":""
       },
       {
+        "subName": "education",
         "name": "text9",
-        "label": "End Date",
+        "label": "ed-end-date",
         "default": "11/08",
         "type": "text",
         "placeholder": "Enter End Date",
-        "outStyle": "basis-1/6 text-xs"
+        "outStyle":""
       }
     ],
     "c": [
       {
-        "name": "ed-text1"
+        "subName": "education",
+        "label": "ed-school",
+        "name": "ed-text1",
+        "placeholder": "Enter School / University"
       },
       {
-        "name": "ed-text2"
+        "subName": "education",
+        "label": "ed-location",
+        "name": "ed-text2",
+        "placeholder": "Enter Location"
       },
       {
-        "name": "ed-text3"
+        "subName": "education",
+        "label": "ed-degree",
+        "name": "ed-text3",
+        "placeholder": "Enter Degree / Field Of Study"
       },
       {
-        "name": "ed-text4"
+        "subName": "education",
+        "label": "ed-start-date",
+        "name": "ed-text4",
+        "placeholder": "Enter Start Date"
       },
       {
-        "name": "ed-text5"
+        "subName": "education",
+        "label": "ed-end-date",
+        "name": "ed-text5",
+        "placeholder": "Enter End Date"
       }
     ],
     "d": [
       {
-        "name": "ed-text6"
+        "subName": "education",
+        "label": "ed-school",
+        "name": "ed-text6",
+        "placeholder": "Enter School / University"
       },
       {
-        "name": "ed-text7"
+        "subName": "education",
+        "label": "ed-location",
+        "name": "ed-text7",
+        "placeholder": "Enter Location"
       },
       {
-        "name": "ed-text8"
+        "subName": "education",
+        "label": "ed-degree",
+        "name": "ed-text8",
+        "placeholder": "Enter Degree / Field Of Study"
       },
       {
-        "name": "ed-text9"
+        "subName": "education",
+        "name": "ed-text9",
+        "label": "ed-start-date",
+        "placeholder": "Enter Start Date"
+        
       },
       {
-        "name": "ed-text10"
+        "subName": "education",
+        "label": "ed-end-date",
+        "name": "ed-text10",
+        "placeholder": "Enter End Date"
       }
     ]
   },
@@ -119,153 +155,234 @@
     "e": [
       {
         "name": "text10",
-        "label": "Position Title",
+        "label": "ex-position-title",
         "default": "Underwriter",
         "type": "text",
+        
         "placeholder": "Enter Position Title",
-        "outStyle": "basis-full font-light text-base"
+        "subName": "experience",
+        "outStyle":"",
+        "inputStyle": ""
       },
       {
         "name": "text11",
-        "label": "Company Name",
+        "label": "ex-company-name",
         "default": "Umbrella Inc.",
         "type": "text",
         "placeholder": "Enter Company Name",
-        "outStyle": "font-light text-sm"
+        "subName": "experience",
+        "outStyle":""
       },
       {
         "name": "text12",
-        "label": "Start Date",
+        "label": "ex-start-date",
         "default": "11/08",
         "type": "text",
         "placeholder": "Enter Start Date",
-        "outStyle": "font-light text-sm"
+        "subName": "experience",
+        "outStyle":""
       },
       {
         "name": "text13",
-        "label": "End Date",
+        "label": "ex-end-date",
         "default": "11/08",
         "type": "text",
         "placeholder": "Enter End Date",
-        "outStyle": "font-light text-sm"
+        "outStyle":""
+        
       },
       {
         "name": "text14",
-        "label": "Location",
+        "label": "ex-location",
         "default": "London City University",
         "type": "text",
         "placeholder": "Enter Location",
-        "outStyle": "font-light text-sm"
+        "subName": "experience",
+        "outStyle":""
       },
       {
         "name": "text15",
-        "label": "Description",
+        "label": "ex-description",
         "default": "Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android",
         "placeholder": "Enter Description",
-        "outStyle": "flex-2 font-light text-xs"
+        "subName": "experience",
+        "outStyle":""
       }
     ],
     "f": [
       {
+        "subName": "experience",
         "name": "ex-text1",
-        "label": "Position Title",
+        "label": "ex-position-title",
         "default": "UX Research Assistant",
         "type": "text",
+        
         "placeholder": "Enter Position Title",
-        "outStyle": "basis-full font-light text-base"
+        
+        "outStyle":""
       },
       {
+        "subName": "experience",
         "name": "ex-text2",
-        "label": "Company Name",
+        "label": "ex-company-name",
         "default": "Black Mesa Labs",
         "type": "text",
         "placeholder": "Enter Company Name",
-        "outStyle": "font-light text-sm"
+        
+        "outStyle":""
       },
       {
+        "subName": "experience",
         "name": "ex-text3",
-        "label": "Start Date",
+        "label": "ex-start-date",
         "default": "11/08",
         "type": "text",
         "placeholder": "Enter Start Date",
-        "outStyle": "font-light text-sm"
+        
+        "outStyle":""
       },
       {
+        "subName": "experience",
         "name": "ex-text4",
-        "label": "End Date",
+        "label": "ex-end-date",
         "default": "11/08",
         "type": "text",
         "placeholder": "Enter End Date",
-        "outStyle": "font-light text-sm"
+        
+        "outStyle":""
       },
       {
+        "subName": "experience",
         "name": "ex-text5",
-        "label": "Location",
+        "label": "ex-location",
         "default": "London City University",
         "type": "text",
         "placeholder": "Enter Location",
-        "outStyle": "font-light text-sm"
+        
+        "outStyle":""
       },
       {
+        "subName": "experience",
         "name": "ex-text6",
-        "label": "Description",
+        "label": "ex-description",
         "default": "Supported senior researchers on accessibility standards for the open web. Created and usability tested wireframes and prototypes. Produced interactive documentation for quick onboarding of new researchers.",
         "placeholder": "Enter Description",
-        "outStyle": "flex-2 font-light text-xs"
+        
+        "outStyle":""
       }
     ],
     "g": [
       {
-        "name": "ex-text7"
+        "subName": "experience",
+        "name": "ex-text7",
+        
+        "label": "ex-position-title",
+        "placeholder": "Enter Position Title"
+        
       },
       {
-        "name": "ex-text8"
+        "subName": "experience",
+        "name": "ex-text8",
+        "label": "ex-company-name",
+        "placeholder": "Enter Company Name"
       },
       {
-        "name": "ex-text9"
+        "subName": "experience",
+        "name": "ex-text9",
+        "label": "ex-start-date",
+        "placeholder": "Enter Start Date"
       },
       {
-        "name": "ex-text10"
+        "subName": "experience",
+        "name": "ex-text10",
+        "label": "ex-end-date",
+        "placeholder": "Enter End Date"
       },
       {
-        "name": "ex-text11"
+        "subName": "experience",
+        "name": "ex-text11",
+        "placeholder": "Enter Location"
       },
       {
-        "name": "ex-text12"
+        "subName": "experience",
+        "name": "ex-text12",
+        "placeholder": "Enter Description"
       }
     ],
     "h": [
       {
-        "name": "ex-text13"
+        "subName": "experience",
+        "name": "ex-text13",
+        "label": "ex-position-title",
+        "placeholder": "Enter Position Title"
       },
       {
-        "name": "ex-text14"
+        "subName": "experience",
+        "name": "ex-text14",
+        "label": "ex-company-name",
+        "placeholder": "Enter Company Name"
       },
       {
-        "name": "ex-text15"
+        "subName": "experience",
+        "name": "ex-text15",
+        "placeholder": "Enter Start Date"
       },
       {
-        "name": "ex-text16"
+        "subName": "experience",
+        "name": "ex-text16",
+        "label": "ex-end-date",
+        "placeholder": "Enter End Date"
       },
       {
+        "subName": "experience",
+        "label": "ex-location",
+        "placeholder": "Enter Location",
         "name": "ex-text17"
+        
+      },
+      {
+        "subName": "experience",
+        "name": "ex-text18",
+        "label": "ex-description",
+        "placeholder": "Enter Description"
       }
     ],
     "i": [
       {
-        "name": "ex-text18"
+        "subName": "experience",
+        "name": "ex-text19",
+        "label": "ex-position-title",
+        "placeholder": "Enter Position Title"
       },
       {
-        "name": "ex-text19"
+        "subName": "experience",
+        "name": "ex-text20",
+        "label": "ex-company-name",
+        "placeholder": "Enter Company Name"
       },
       {
-        "name": "ex-text20"
+        "subName": "experience",
+        "name": "ex-text21",
+        "label": "ex-start-date",
+        "placeholder": "Enter Start Date"
       },
       {
-        "name": "ex-text21"
+        "subName": "experience",
+        "name": "ex-text22",
+        "label": "ex-end-date",
+        "placeholder": "Enter End Date"
       },
       {
-        "name": "ex-text22"
+        "subName": "experience",
+        "name": "ex-text23",
+        "label": "ex-location",
+        "placeholder": "Enter Location"
+      },
+      {
+        "subName": "experience",
+        "name": "ex-text24",
+        "label": "ex-description",
+        "placeholder": "Enter Description"
       }
     ]
   }

@@ -1,0 +1,48 @@
+#output-1,
+#output-2,
+#output-3{
+    /* display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+ */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ed-school-text-container{
+    flex-basis: 50%;
+    font-size: 15px;
+    margin-top: 7px; 
+    font-weight: 700;
+}
+
+.ed-location-text-container{
+    flex-basis: 50%;   
+    font-weight: 500;
+    font-size: 13px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 7px;
+}
+
+.ed-degree-text-container{
+    flex-basis: 50%;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.ed-start-date-text-container{
+    /* font-size: 10px; */
+    font-size: 1rem;
+    flex-basis: 44%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ed-end-date-text-container{
+    flex-basis: 6%;
+    /* font-size: 10px; */
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}

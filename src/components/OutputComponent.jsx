@@ -10,6 +10,11 @@ const CreateOutputs = ({ text }) => {
     }
   }
 
+  function isTextEmpty(e){
+    console.log(e)
+
+  }
+
   return (
     <>
       {[
@@ -21,21 +26,24 @@ const CreateOutputs = ({ text }) => {
         mainData.experience.f,
         mainData.experience.g,
         mainData.experience.h,
-      ].map((arr, index) => (
-        <div id={"output-" + index} key={index}>
+      ].map((arr, index) => {
+      
+      return (
+        <div id={"output-" + index} className="bg-white" key={index}>
           {arr.map((data, index) => (
-            <div id={data.name} key={data.name + index}>
+            <div id={data.name} className={!text[data.name] ? "hidden" : ((data.label + "-text-container ") + "")} key={data.name + index}>
               <p
                 id={data.label}
                 key={data.name + index}
-                className={data.outStyle}
+                className={data.outStyle || ""}
+                name={data.subName + "-text"}
               >
                 {sanitize(text[data.name])}
               </p>
             </div>
           ))}
         </div>
-      ))}
+      )})}
     </>
   );
 };

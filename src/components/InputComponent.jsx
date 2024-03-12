@@ -12,10 +12,11 @@ const InputComponent = ({ sendTextBack, data, defaultText }) => {
     <>
       <input
         id={data.name}
-        className=""
+        className={data.inputStyle || "w-full h-10 my-2"}
+        placeholder={data.placeholder}
         value={defaultText[data.name] || ""}
         onChange={(e) => {
-          /* setText(e.target.value);  */ sendTextBack(
+           sendTextBack(
             e.target.value,
             data.name,
           );

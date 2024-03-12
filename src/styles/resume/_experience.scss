@@ -1,0 +1,50 @@
+#output-4,
+#output-5,
+#output-6,
+#output-7{
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+}
+
+.ex-position-title-text-container{
+    grid-row: 2;
+    grid-column: 1;
+    font-size: 11px;
+}
+
+.ex-company-name-text-container{
+    grid-row: 1;
+    grid-column: 1;
+    padding-top: 15px;
+    font-weight: 800;
+}
+
+.ex-start-date-text-container{
+    grid-row: 2;
+    grid-column: 5;
+    /* font-size: 10px; */
+    font-size: 1rem;
+}
+
+.ex-end-date-text-container{
+    grid-row: 2;
+    grid-column: 6;
+    /* font-size: 10px; */
+    font-size: 1rem;
+}
+
+.ex-location-text-container{
+    padding-top: 15px;
+    grid-row: 1;
+    grid-column: 3 / span 4;
+    font-weight: 500;
+}
+
+.ex-description-text-container{
+    grid-row: 4;
+    grid-column: 1 / span 6;
+    padding-top: 30px;
+    /* padding-bottom: 15px; */
+    padding-bottom: 1rem;
+}

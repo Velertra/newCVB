@@ -1,0 +1,33 @@
+@import "education";
+@import "experience";
+@import "personal";
+
+#output-1,
+#output-4 {
+    border-top-width: 1px;
+    border-color: black;
+}
+
+#output-0,
+#output-1,
+#output-2,
+#output-3,
+#output-4,
+#output-5,
+#output-6,
+#output-7{
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+
+#output-7{
+    /* padding-bottom: 15px; */
+    padding-bottom: 1rem;
+}
+
+
+
+/*#outputs > div > div{
+    padding: 3px;
+} */
