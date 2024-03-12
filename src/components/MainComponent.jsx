@@ -36,19 +36,40 @@ const MainComponent = () => {
   }
 
   function displaySection(edit) {
-    //console.log(edit.target.parentNode.nextElementSibling);
+    //console.log(edit.target.parentNode.parentNode.id);
+    edit.target.style.display = "none"
+      edit.target.parentNode.nextElementSibling.style.display =
+        "block";
+        edit.target.parentNode.querySelector('[id*="remove"]').style.display = "none";
 
-    if (edit.target.parentNode.parentNode.id == "education-input-container") {
+   /*  if (edit.target.parentNode.parentNode.id == "education-input-container") {
       edit.target.style.display = "none"
       edit.target.parentNode.nextElementSibling.style.display =
         "block";
-      /* edit.target.parentNode[5].style.display = "none"; */
+        edit.target.parentNode.querySelector('[id*="remove"]').style.display = "none";
+
     } else {
       edit.target.style.display = "none"
       edit.target.parentNode.nextElementSibling.style.display =
         "block";
-      /* edit.target.parentNode[6].style.display = "none"; */
+      edit.target.parentNode.querySelector('[id*="remove"]').style.display = "none";
+      
+    } */
+  }
+
+  function removeSection(remove){
+    //console.log(remove.target.parentNode.previousElementSibling.id);
+    remove.target.parentNode.style.display = "none";
+    remove.target.parentNode.previousElementSibling.querySelector('[id*="add-btn"]').style.display = "block";
+    remove.target.parentNode.previousElementSibling.querySelector('[id*="remove"]').style.display = "block";
+
+    if(["b-inputs", "e-inputs"].includes(remove.target.parentNode.previousElementSibling.id)){
+      remove.target.parentNode.previousElementSibling.querySelector('[id*="remove"]').style.display = "none";
     }
+  
+    remove.target.parentNode.querySelectorAll('input').forEach((input) => {
+      setText((prevText) => ({ ...prevText, [input.id]: "" }));
+    })
   }
 
   return (
@@ -81,11 +102,12 @@ const MainComponent = () => {
                 </div>
                 ))}
                 <button id={key + "-add-btn"} onClick={(e) => displaySection(e)}>+</button>
+                <button id={key + "-remove-btn"} onClick={(e) => removeSection(e)}>-</button> 
                 </div>
                 
               ))}
               
-              {/* <button></button> */}
+              
             </form>
           </div>
         ))}

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import mainData from "../constants/MainData.json";
 
 const CreateOutputs = ({ text }) => {
-
   function sanitize(letters) {
     if (typeof letters === "string") {
       return letters.replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -25,12 +24,16 @@ const CreateOutputs = ({ text }) => {
       ].map((arr, index) => (
         <div id={"output-" + index} key={index}>
           {arr.map((data, index) => (
-              <div id={data.name} key={data.name + index}>
-                  <p id={data.label} key={data.name + index} className={data.outStyle}>
-                    {sanitize(text[data.name])}
-                  </p>
-                </div>
-        ))}
+            <div id={data.name} key={data.name + index}>
+              <p
+                id={data.label}
+                key={data.name + index}
+                className={data.outStyle}
+              >
+                {sanitize(text[data.name])}
+              </p>
+            </div>
+          ))}
         </div>
       ))}
     </>
