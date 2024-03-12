@@ -66,8 +66,8 @@ const MainComponent = () => {
   }
 
   return (
-    <div id="main-component" className="flex flex-col items-center pb-8 md:flex-row md:items-start md:overflow-auto" >
-      <div id="main-inputs" className="flex flex-col items-center w-11/12 md:w-7/12 md:pl-5 md:pr-5 md:overflow-auto">
+    <div id="main-component" className="flex flex-col items-center pb-8 md:flex-row md:items-start" >
+      <div id="main-inputs" className="flex flex-col items-center w-11/12 md:w-7/12 md:pl-5 md:pr-5">
         <img
           src="/icon/user-pen.svg"
           className="w-9 self-baseline mt-5 ml-3"
